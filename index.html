@@ -9,6 +9,83 @@
 <meta property="og:description" content="Guelph's destination for authentic Sinaloan Mexican cuisine. Birria, aguachiles, sushi, ceviches, and weekend brunch.">
 <meta property="og:image" content="photos/hero-flambe-sushi.webp">
 <meta property="og:url" content="https://sinalove.ca">
+<link rel="canonical" href="https://ads-ux.github.io/sinalove-website/">
+<meta name="geo.region" content="CA-ON">
+<meta name="geo.placename" content="Guelph, Ontario, Canada">
+<meta name="geo.position" content="43.5554887;-80.2219194">
+<meta name="ICBM" content="43.5554887, -80.2219194">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%231a3320'/><text x='16' y='22' font-family='Georgia,serif' font-size='20' font-weight='bold' fill='%23c8912a' text-anchor='middle'>S</text></svg>">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Sinalove",
+  "alternateName": "Sinalove Tacos, Sushi and Seafood",
+  "description": "Authentic Sinaloan Mexican restaurant in Guelph, Ontario. Owned by Erendira Paz and Chef Joel Romero. Serving birria tacos, fresh aguachiles, Sinaloan sushi, Pacific coast ceviches, seafood cocktails, and weekend brunch with café de olla.",
+  "url": "https://ads-ux.github.io/sinalove-website/",
+  "telephone": "+15198291051",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "447 Elizabeth Street",
+    "addressLocality": "Guelph",
+    "addressRegion": "ON",
+    "postalCode": "N1E 6C2",
+    "addressCountry": "CA"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 43.5554887,
+    "longitude": -80.2219194
+  },
+  "hasMap": "https://www.google.com/maps?daddr=43.5554887,-80.2219194",
+  "servesCuisine": ["Mexican", "Sinaloan", "Seafood", "Sushi", "Tacos", "Ceviche"],
+  "priceRange": "$$",
+  "currenciesAccepted": "CAD",
+  "menu": "https://sinalovemexican.bycalibre.ca/menu",
+  "image": [
+    "https://ads-ux.github.io/sinalove-website/photos/hero-flambe-sushi.webp",
+    "https://ads-ux.github.io/sinalove-website/photos/birria-tacos.jpg",
+    "https://ads-ux.github.io/sinalove-website/photos/mariachi-mural.webp"
+  ],
+  "openingHoursSpecification": [
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": "Tuesday", "opens": "12:00", "closes": "19:45"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": "Wednesday", "opens": "12:00", "closes": "19:45"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": "Thursday", "opens": "12:00", "closes": "20:45"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "12:00", "closes": "20:45"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "08:00", "closes": "20:45"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "08:00", "closes": "19:45"}
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "56",
+    "bestRating": "5"
+  },
+  "review": [
+    {
+      "@type": "Review",
+      "author": {"@type": "Person", "name": "Usha K."},
+      "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+      "reviewBody": "Authentic Mexican cuisine! Absolutely delicious!"
+    },
+    {
+      "@type": "Review",
+      "author": {"@type": "Person", "name": "Ana Cristina S."},
+      "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+      "reviewBody": "Mi comida mexicana favorita en Canadá"
+    }
+  ],
+  "founder": [
+    {"@type": "Person", "name": "Erendira Paz"},
+    {"@type": "Person", "name": "Joel Romero"}
+  ],
+  "sameAs": [
+    "https://www.instagram.com/sina.loveguelph/",
+    "https://www.facebook.com/p/Sinalove-Tacos-Sushi-and-Seafood-61578084077217/",
+    "https://www.ubereats.com/ca/store/sinalove-tacos-sushi-and-seafood/LED51m91XX28UUcQiV6cgw"
+  ]
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -185,10 +262,22 @@ footer{background:#060c07;padding:40px 48px;text-align:center;color:rgba(255,255
 footer a{color:rgba(255,255,255,.45);text-decoration:none;transition:color .2s}
 footer a:hover{color:var(--gold)}
 
+/* HAMBURGER */
+.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px;z-index:1100}
+.hamburger span{display:block;width:24px;height:2px;background:white;transition:all .3s;border-radius:2px}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mobile-menu{display:none;position:fixed;inset:0;background:var(--dark);z-index:1050;flex-direction:column;align-items:center;justify-content:center;gap:36px}
+.mobile-menu.open{display:flex}
+.mobile-menu a{font-family:'Playfair Display',serif;font-size:28px;font-weight:700;color:white;text-decoration:none;letter-spacing:.02em;transition:color .2s}
+.mobile-menu a:hover{color:var(--gold-light)}
+.mobile-menu .m-order{background:var(--gold);padding:14px 32px;border-radius:4px;font-size:20px}
 /* RESPONSIVE */
 @media(max-width:900px){
   nav{padding:16px 24px}
   .nav-links{display:none}
+  .hamburger{display:flex}
   .about{padding:60px 24px}
   .about-grid,.location-grid{grid-template-columns:1fr;gap:40px}
   .about-photo img{height:360px}
@@ -222,7 +311,17 @@ footer a:hover{color:var(--gold)}
     <li><a href="#hours">Hours</a></li>
     <li><a href="https://sinalovemexican.bycalibre.ca/pickup" target="_blank" class="nav-cta">Order Online</a></li>
   </ul>
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about" onclick="closeMobile()">Our Story</a>
+  <a href="#menu" onclick="closeMobile()">Menu</a>
+  <a href="#brunch" onclick="closeMobile()">Brunch</a>
+  <a href="#hours" onclick="closeMobile()">Hours</a>
+  <a href="https://sinalovemexican.bycalibre.ca/pickup" target="_blank" class="m-order" onclick="closeMobile()">Order Online</a>
+</div>
 
 <!-- HERO -->
 <section class="hero" id="home">
@@ -503,12 +602,12 @@ footer a:hover{color:var(--gold)}
       </div>
       <div class="review-card">
         <div class="review-stars">★★★★★</div>
-        <p class="review-text">"The food is absolutely amazing. You can tell everything is made fresh. Best Mexican food in Guelph by a long shot."</p>
+        <p class="review-text">"Didn't disappoint — actually, I am quite impressed. Amazing food and fast service."</p>
         <div class="review-author">Google Review</div>
       </div>
       <div class="review-card">
         <div class="review-stars">★★★★★</div>
-        <p class="review-text">"The birria tacos are life-changing. The consommé is rich and the meat just falls apart. We come here every week now."</p>
+        <p class="review-text">"A hidden gem in Guelph. Fantastic cocktails, space and vibe."</p>
         <div class="review-author">Google Review</div>
       </div>
     </div>
@@ -573,6 +672,22 @@ footer a:hover{color:var(--gold)}
   </div>
 </section>
 
+<!-- FAQ (SEO + LLM) -->
+<section style="background:var(--warm-white);padding:80px 48px" id="faq">
+<div class="container">
+<span class="section-label">Common Questions</span>
+<h2 class="section-title">FAQ</h2>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:32px;margin-top:40px">
+<div><h3 style="font-family:'Playfair Display',serif;font-size:18px;margin-bottom:10px">What type of food does Sinalove serve?</h3><p style="font-size:15px;color:var(--text-light);line-height:1.7">Sinalove serves authentic Sinaloan Mexican cuisine from Mexico's Pacific coast — birria tacos, fresh aguachiles, ceviches, Sinaloan-style sushi rolls, seafood cocktails, and a weekend brunch featuring traditional café de olla.</p></div>
+<div><h3 style="font-family:'Playfair Display',serif;font-size:18px;margin-bottom:10px">Is Sinalove halal?</h3><p style="font-size:15px;color:var(--text-light);line-height:1.7">Yes. Sinalove uses halal-certified beef and chicken. Halal items include the birria tacos, Taco de Arrachera, and related quesadillas.</p></div>
+<div><h3 style="font-family:'Playfair Display',serif;font-size:18px;margin-bottom:10px">Does Sinalove serve brunch?</h3><p style="font-size:15px;color:var(--text-light);line-height:1.7">Yes — every Saturday and Sunday, 8:00 AM to 1:00 PM. Brunch features authentic Sinaloan Mexican breakfast and traditional café de olla (clay pot coffee).</p></div>
+<div><h3 style="font-family:'Playfair Display',serif;font-size:18px;margin-bottom:10px">Where is Sinalove in Guelph?</h3><p style="font-size:15px;color:var(--text-light);line-height:1.7">Sinalove is at 447 Elizabeth Street, Guelph, Ontario N1E 6C2. Closed Mondays. Open Tuesday–Sunday, with weekend brunch on Saturday and Sunday mornings.</p></div>
+<div><h3 style="font-family:'Playfair Display',serif;font-size:18px;margin-bottom:10px">Does Sinalove have vegan options?</h3><p style="font-size:15px;color:var(--text-light);line-height:1.7">Yes. The vegan menu includes the Veggi Roll, Zucchini Taco, Mushroom Taco, and Guacamole & Chips. Many ceviches and sushi can also be adapted.</p></div>
+<div><h3 style="font-family:'Playfair Display',serif;font-size:18px;margin-bottom:10px">Can I order Sinalove for pickup or delivery?</h3><p style="font-size:15px;color:var(--text-light);line-height:1.7">Yes. Order directly for pickup or delivery at <a href="https://sinalovemexican.bycalibre.ca" style="color:var(--gold)">sinalovemexican.bycalibre.ca</a>, or through Uber Eats.</p></div>
+</div>
+</div>
+</section>
+
 <!-- FOOTER -->
 <footer>
   <p><a href="tel:+15198291051">519-829-1051</a> · <a href="https://www.google.com/maps?saddr=My+Location&daddr=43.5554887,-80.2219194" target="_blank">447 Elizabeth Street, Guelph, ON</a> · <a href="https://www.instagram.com/sina.loveguelph/" target="_blank">@sina.loveguelph</a></p>
@@ -590,6 +705,18 @@ function showTab(e, tabId) {
   document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
   document.getElementById('tab-' + tabId).classList.add('active');
   e.currentTarget.classList.add('active');
+}
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('open');
+  mobileMenu.classList.toggle('open');
+  document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+});
+function closeMobile() {
+  hamburger.classList.remove('open');
+  mobileMenu.classList.remove('open');
+  document.body.style.overflow = '';
 }
 </script>
 </body>

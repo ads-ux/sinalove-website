@@ -1,0 +1,1146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menu – Sinalove | Guelph's Authentic Mexican Restaurant</title>
+<meta name="description" content="Full menu for Sinalove Tacos, Sushi & Seafood in Guelph, Ontario. Authentic Sinaloan Mexican cuisine — birria, aguachiles, sushi rolls, seafood cocktails, tacos and more.">
+<link rel="canonical" href="https://ads-ux.github.io/sinalove-website/menu.html">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%231a3320'/><text x='16' y='22' font-family='Georgia,serif' font-size='20' font-weight='bold' fill='%23c8912a' text-anchor='middle'>S</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --dark:#0e1a10;
+  --green:#1a3320;
+  --gold:#c8912a;
+  --gold-light:#e8a83a;
+  --cream:#faf7f0;
+  --warm-white:#fff9f0;
+  --text:#1a1a1a;
+  --text-light:#666;
+  --border:#e8e0d0;
+  --card-radius:10px;
+  --sidebar-w:260px;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--cream);color:var(--text);line-height:1.6}
+
+/* NAV */
+nav{background:var(--dark);padding:14px 32px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:200;box-shadow:0 2px 12px rgba(0,0,0,.4)}
+.nav-brand{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:white;text-decoration:none;letter-spacing:.02em}
+.nav-brand span{color:var(--gold)}
+.nav-back{color:rgba(255,255,255,.75);font-size:13px;font-weight:500;text-decoration:none;display:flex;align-items:center;gap:6px;transition:color .2s}
+.nav-back:hover{color:var(--gold-light)}
+.nav-back svg{width:16px;height:16px;fill:currentColor}
+.nav-order{background:var(--gold);color:white;padding:9px 20px;border-radius:4px;font-size:13px;font-weight:600;text-decoration:none;transition:background .2s}
+.nav-order:hover{background:var(--gold-light)}
+
+/* HERO BANNER */
+.menu-hero{background:linear-gradient(135deg,var(--dark) 0%,var(--green) 60%);padding:48px 32px 36px;text-align:center}
+.menu-hero h1{font-family:'Playfair Display',serif;font-size:clamp(28px,5vw,48px);color:white;margin-bottom:10px}
+.menu-hero p{color:rgba(255,255,255,.65);font-size:15px;max-width:500px;margin:0 auto 18px}
+.menu-hero .hero-note{display:inline-block;background:rgba(200,145,42,.2);border:1px solid var(--gold);color:var(--gold-light);padding:7px 18px;border-radius:20px;font-size:13px;font-weight:500}
+
+/* LAYOUT */
+.layout{display:flex;min-height:calc(100vh - 120px)}
+
+/* SIDEBAR */
+.sidebar{width:var(--sidebar-w);flex-shrink:0;position:sticky;top:57px;height:calc(100vh - 57px);overflow-y:auto;background:var(--dark);padding:16px 0;scrollbar-width:thin;scrollbar-color:var(--gold) transparent}
+.sidebar::-webkit-scrollbar{width:4px}
+.sidebar::-webkit-scrollbar-thumb{background:var(--gold);border-radius:2px}
+.sidebar-title{color:rgba(255,255,255,.4);font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:8px 20px 6px}
+.cat-link{display:flex;align-items:center;justify-content:space-between;padding:10px 20px;color:rgba(255,255,255,.75);text-decoration:none;font-size:13.5px;font-weight:500;transition:all .15s;border-left:3px solid transparent;gap:8px}
+.cat-link:hover{color:white;background:rgba(255,255,255,.06)}
+.cat-link.active{color:var(--gold-light);background:rgba(200,145,42,.12);border-left-color:var(--gold)}
+.cat-link .count{background:rgba(255,255,255,.1);color:rgba(255,255,255,.5);font-size:11px;padding:2px 7px;border-radius:10px;min-width:24px;text-align:center;flex-shrink:0}
+.cat-link.active .count{background:rgba(200,145,42,.2);color:var(--gold-light)}
+
+/* MAIN CONTENT */
+.content{flex:1;padding:0 0 60px;min-width:0}
+
+/* SECTION */
+.menu-section{border-bottom:1px solid var(--border)}
+.section-header{padding:28px 32px 22px;display:flex;align-items:center;gap:14px;min-height:90px}
+.section-header h2{font-family:'Playfair Display',serif;font-size:clamp(20px,3vw,28px);color:white;font-weight:700}
+.section-icon{font-size:24px;flex-shrink:0}
+.item-count{color:rgba(255,255,255,.5);font-size:12px;margin-left:auto;white-space:nowrap}
+
+/* ITEMS GRID */
+.items-grid{padding:24px 32px;display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}
+
+/* ITEM CARD */
+.item-card{background:white;border-radius:var(--card-radius);overflow:hidden;border:1px solid var(--border);transition:transform .2s,box-shadow .2s;display:flex;flex-direction:column}
+.item-card:hover{transform:translateY(-2px);box-shadow:0 6px 24px rgba(0,0,0,.09)}
+.item-card.has-photo .item-photo{height:180px;background-size:cover;background-position:center;flex-shrink:0}
+.item-info{padding:14px 16px;flex:1;display:flex;flex-direction:column;gap:6px}
+.item-header{display:flex;align-items:flex-start;justify-content:space-between;gap:10px}
+.item-name{font-family:'Playfair Display',serif;font-size:15px;font-weight:600;color:var(--text);line-height:1.3;flex:1}
+.item-price{font-weight:700;color:var(--gold);font-size:15px;white-space:nowrap;flex-shrink:0}
+.item-desc{color:var(--text-light);font-size:13px;line-height:1.5;margin-top:2px}
+.badge{display:inline-block;font-size:10px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;padding:2px 7px;border-radius:10px;margin-left:4px;vertical-align:middle}
+.badge.halal{background:#e8f5e9;color:#2e7d32}
+.badge:not(.halal){background:#fff3e0;color:#e65100}
+
+/* No-photo cards — compact list style */
+.no-photo{flex-direction:row;align-items:center}
+.no-photo .item-info{padding:12px 16px}
+.no-photo .item-name{font-family:'Inter',sans-serif;font-size:14px;font-weight:500}
+
+/* ORDER CTA */
+.order-cta{margin:40px 32px 0;padding:28px 32px;background:linear-gradient(135deg,var(--dark),var(--green));border-radius:12px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.order-cta h3{font-family:'Playfair Display',serif;color:white;font-size:20px}
+.order-cta p{color:rgba(255,255,255,.6);font-size:13px;margin-top:4px}
+.order-cta a{background:var(--gold);color:white;padding:13px 28px;border-radius:6px;font-weight:600;text-decoration:none;font-size:14px;transition:background .2s;white-space:nowrap}
+.order-cta a:hover{background:var(--gold-light)}
+
+/* MOBILE */
+@media(max-width:768px){
+  .sidebar{display:none}
+  .menu-hero{padding:32px 20px 24px}
+  .section-header{padding:20px 20px 16px}
+  .items-grid{padding:16px 16px;grid-template-columns:1fr}
+  .order-cta{margin:28px 16px 0;padding:20px}
+  nav{padding:12px 20px}
+  .nav-brand{font-size:17px}
+  
+  /* Mobile sticky category pills */
+  .mobile-cats{position:sticky;top:57px;z-index:100;background:var(--dark);padding:10px 16px;overflow-x:auto;display:flex;gap:8px;scrollbar-width:none}
+  .mobile-cats::-webkit-scrollbar{display:none}
+  .mobile-cat-pill{flex-shrink:0;color:rgba(255,255,255,.7);background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);padding:6px 14px;border-radius:20px;font-size:12px;font-weight:500;text-decoration:none;transition:all .15s;white-space:nowrap}
+  .mobile-cat-pill:hover,.mobile-cat-pill.active{background:var(--gold);border-color:var(--gold);color:white}
+}
+@media(min-width:769px){
+  .mobile-cats{display:none}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-back">
+    <svg viewBox="0 0 24 24"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+    Back to Site
+  </a>
+  <a href="index.html" class="nav-brand">Sina<span>love</span></a>
+  <a href="https://www.sinalovetacossushiandseafoodon.com/sinalove--tacos-sushi-and-seafood/menu/447-Elizabeth-St/" target="_blank" class="nav-order">Order Online →</a>
+</nav>
+
+<!-- Mobile category pills -->
+<div class="mobile-cats">
+  <a href="#appetizers" class="mobile-cat-pill">🍤 Appetizers</a> <a href="#bowls" class="mobile-cat-pill">🍚 Bowls</a> <a href="#teriyaki-bowls" class="mobile-cat-pill">🍱 Teriyaki Bowls</a> <a href="#fogon-del-pacifico-hot-molcajete" class="mobile-cat-pill">🔥 Fogon Del Pacifico / Hot Molcajete</a> <a href="#birria-plate" class="mobile-cat-pill">🥩 Birria Plate</a> <a href="#mexican-tacos" class="mobile-cat-pill">🌮 Mexican Tacos</a> <a href="#seafood-tacos" class="mobile-cat-pill">🐟 Seafood Tacos</a> <a href="#seafood-fresh" class="mobile-cat-pill">🍋 Seafood Fresh</a> <a href="#seafood-cocktail" class="mobile-cat-pill">🦐 Seafood Cocktail</a> <a href="#seafood-aguachiles" class="mobile-cat-pill">🌶️ Seafood Aguachiles</a> <a href="#sushi-natural" class="mobile-cat-pill">🍣 Sushi Natural</a> <a href="#sushi-breaded" class="mobile-cat-pill">🍱 Sushi Breaded</a> <a href="#sushi-special" class="mobile-cat-pill">⭐ Sushi Special</a> <a href="#vegan-menu" class="mobile-cat-pill">🌿 Vegan Menu</a> <a href="#kids-menu" class="mobile-cat-pill">⭐ Kids Menu</a> <a href="#extras" class="mobile-cat-pill">➕ Extras</a> <a href="#desserts" class="mobile-cat-pill">🍮 Desserts</a> <a href="#drinks" class="mobile-cat-pill">🥤 Drinks</a>
+</div>
+
+<div class="menu-hero">
+  <h1>Our Full Menu</h1>
+  <p>Authentic Sinaloan flavours — Pacific coast seafood, birria, fresh sushi rolls, and more</p>
+  <span class="hero-note">📍 447 Elizabeth St, Guelph · Dine In · Pickup · Delivery</span>
+</div>
+
+<div class="layout">
+  <nav class="sidebar" aria-label="Menu categories">
+    <div class="sidebar-title">Menu Categories</div>
+    <a href="#appetizers" class="cat-link" data-cat="appetizers">🍤 Appetizers <span class="count">6</span></a>
+<a href="#bowls" class="cat-link" data-cat="bowls">🍚 Bowls <span class="count">1</span></a>
+<a href="#teriyaki-bowls" class="cat-link" data-cat="teriyaki-bowls">🍱 Teriyaki Bowls <span class="count">4</span></a>
+<a href="#fogon-del-pacifico-hot-molcajete" class="cat-link" data-cat="fogon-del-pacifico-hot-molcajete">🔥 Fogon Del Pacifico / Hot Molcajete <span class="count">1</span></a>
+<a href="#birria-plate" class="cat-link" data-cat="birria-plate">🥩 Birria Plate <span class="count">1</span></a>
+<a href="#mexican-tacos" class="cat-link" data-cat="mexican-tacos">🌮 Mexican Tacos <span class="count">12</span></a>
+<a href="#seafood-tacos" class="cat-link" data-cat="seafood-tacos">🐟 Seafood Tacos <span class="count">6</span></a>
+<a href="#seafood-fresh" class="cat-link" data-cat="seafood-fresh">🍋 Seafood Fresh <span class="count">7</span></a>
+<a href="#seafood-cocktail" class="cat-link" data-cat="seafood-cocktail">🦐 Seafood Cocktail <span class="count">3</span></a>
+<a href="#seafood-aguachiles" class="cat-link" data-cat="seafood-aguachiles">🌶️ Seafood Aguachiles <span class="count">2</span></a>
+<a href="#sushi-natural" class="cat-link" data-cat="sushi-natural">🍣 Sushi Natural <span class="count">2</span></a>
+<a href="#sushi-breaded" class="cat-link" data-cat="sushi-breaded">🍱 Sushi Breaded <span class="count">3</span></a>
+<a href="#sushi-special" class="cat-link" data-cat="sushi-special">⭐ Sushi Special <span class="count">5</span></a>
+<a href="#vegan-menu" class="cat-link" data-cat="vegan-menu">🌿 Vegan Menu <span class="count">3</span></a>
+<a href="#kids-menu" class="cat-link" data-cat="kids-menu">⭐ Kids Menu <span class="count">3</span></a>
+<a href="#extras" class="cat-link" data-cat="extras">➕ Extras <span class="count">5</span></a>
+<a href="#desserts" class="cat-link" data-cat="desserts">🍮 Desserts <span class="count">2</span></a>
+<a href="#drinks" class="cat-link" data-cat="drinks">🥤 Drinks <span class="count">4</span></a>
+
+  </nav>
+  <div class="content">
+    
+<section class="menu-section" id="appetizers">
+  <div class="section-header" style="background-image: linear-gradient(rgba(14,26,16,0.55), rgba(14,26,16,0.8)), url("https://d2gqo3h0psesgi.cloudfront.net/auto/sinalove--tacos-sushi-and-seafood-jxz4hq7cvsd3tb9k.jpg"); background-size: cover; background-position: center;">
+    <span class="section-icon">🍤</span>
+    <h2>Appetizers</h2>
+    <span class="item-count">6 items</span>
+  </div>
+  <div class="items-grid">
+
+    <div class="item-card has-photo">
+      <div class="item-photo" style="background-image:url('https://d2gqo3h0psesgi.cloudfront.net/auto/sinalove--tacos-sushi-and-seafood-kvh2rdgtf8clbj53.jpg')"></div>
+      <div class="item-info">
+        <div class="item-header">
+          <h3 class="item-name">Rock Shrimp </h3>
+          <span class="item-price">$16.75</span>
+        </div>
+        <p class="item-desc">6 crispy shrimp served on a bed of white rice and Sriracha Mayo Sauce.</p>
+      </div>
+    </div>
+
+    <div class="item-card has-photo">
+      <div class="item-photo" style="background-image:url('https://d2gqo3h0psesgi.cloudfront.net/auto/sinalove--tacos-sushi-and-seafood-srxf95p23v7l6dbk.jpg')"></div>
+      <div class="item-info">
+        <div class="item-header">
+          <h3 class="item-name">Cheese Kushiages </h3>
+          <span class="item-price">$14.65</span>
+        </div>
+        <p class="item-desc">Deep-fried cheese skewers, 4 pieces.</p>
+      </div>
+    </div>
+
+    <div class="item-card has-photo">
+      <div class="item-photo" style="background-image:url('https://d2gqo3h0psesgi.cloudfront.net/auto/sinalove--tacos-sushi-and-seafood-t986yhq5dlvkb73p.jpg')"></div>
+      <div class="item-info">
+        <div class="item-header">
+          <h3 class="item-name">Ebi Cheese </h3>
+          <span class="item-price">$18.85</span>
+        </div>
+        <p class="item-desc">6 shrimp stuffed with cream cheese and breaded on the outside.</p>
+      </div>
+    </div>
+
+    <div class="item-card has-photo">
+      <div class="item-photo" style="background-image:url('https://d2gqo3h0psesgi.cloudfront.net/auto/sinalove--tacos-sushi-and-seafood-jxz4hq7cvsd3tb9k.jpg')"></div>
+      <div class="item-info">
+        <div class="item-header">
+          <h3 class="item-name">Bacon Shrimp </h3>
+          <span class="item-price">$24.10</span>
+        </div>
+        <p class="item-desc">Shrimp stuffed with mozzarella cheese and wrapped in bacon.</p>
+      </div>
+    </div>
+
+    <div class="item-card no-photo">
+      
+      <div class="item-info">
+        <div class="item-header">
+          <h3 class="item-name">Mexican Chorizo & Cheese </h3>
+          <span class="item-price">$16.75</span>
+        </div>
+        
+      </div>
+    </div>
+
+    <div class="item-card no-photo">
+      
+      <div class="item-info">
+        <div class="item-header">
+          <h3 class="item-name">Guacamole & Chips </h3>
+          <span class="item-price">$16.75</span>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="menu-section" id="bowls">
+  <div class="section-header" style="background: var(--green);">
+    <span class="section-icon">🍚</span>
+    <h2>Bowls</h2>
+    <span class="item-count">1 item</span>
+  </div>
+  <div class="items-grid">
+
+    <div class="item-card no-photo">
+      
+      <div class="item-info">
+        <div class="item-header">
+          <h3 class="item-name">Special Gohan </h3>
+          <span class="item-price">$14.65</span>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="menu-section" id="teriyaki-bowls">
+  <div class="section-header" style="background-image: linear-gradient(rgba(14,26,16,0.55), rgba(14,26,16,0.8)), url("https://d2gqo3h0psesgi.cloudfront.net/auto/sinalove--tacos-sushi-and-seafood-nmv468cjkfy9pgb2.jpg"); background-size: cover; background-position: center;">
+    <span class="section-icon">🍱</span>
+    <h2>Teriyaki Bowls</h2>
+    <span class="item-count">4 items</span>
+  </div>
+  <div class="items-grid">
+
+    <div class="item-card no-photo">
+      
+      <div class="item-info">
+        <div class="item-header">
+          <h3 class="item-name">Chicken Teriyaki Bowl </h3>
+          <span class="item-price">$16.75</span>
+        </div>
+        
+      </div>
+    </div>
+
+    <div class="item-card no-photo">
+      
+      <div class="item-info">
+        <div class="item-header">
+          <h3 class="item-name">Shrimp Teriyaki Bowl </h3>
+          <span class="item-price">$16.75</span>
+        </div>
+        
+      </div>
+    </div>
+
+    <div class="item-card no-photo">
+      
+      <div class="item-info">
+        <div class="item-header">
+          <h3 class="item-name">Beef (Arrachera) Teriyaki Bowl </h3>
+          <span class="item-price">$23.05</span>
+        </div>
+        
+      </div>
+    </div>
+
+    <div class="item-card has-photo">
+      <div class="item-photo" style="background-image:url('https://d2gqo3h0psesgi.cloudfront.net/auto/sinalove--tacos-sushi-and-seafood-nmv468cjkfy9pgb2.jpg')"></div>
+      <div class="item-info">
+        <div class="item-header">
+          <h3 class="item-name">Mixed 3 Proteins Bowl </h3>
+          <span class="item-price">$27.25</span>
+        </div>
+        <p class="item-desc">Steamed rice with grilled protein, topped with teriyaki sauce, sesame seeds and scallions.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="menu-section" id="fogon-del-pacifico-hot-molcajete">
+  <div class="section-header" style="background-image: linear-gradient(rgba(14,26,16,0.55), rgba(14,26,16,0.8)), url("https://d2gqo3h0psesgi.cloudfront.net/auto/sinalove--tacos-sushi-and-seafood-5ybgp2snx6dlfctj.jpg"); background-size: cover; background-position: center;">
+    <span class="section-icon">🔥</span>
+    <h2>Fogon Del Pacifico / Hot Molcajete</h2>
+    <span class="item-count">1 item</span>
+  </div>
+  <div class="items-grid">
+
+    <div class="item-card has-photo">
+      <div class="item-photo" style="background-image:url('https://d2gqo3h0psesgi.cloudfront.net/auto/sinalove--tacos-sushi-and-seafood-5ybgp2snx6dlfctj.jpg')"></div>
+      <div class="item-info">
+        <div class="item-header">
+          <h3 class="item-name">Fogon Del Pacifico / Hot Molcajete </h3>
+          <span class="item-price">$56.65</span>
+        </div>
+        <p class="item-desc">A sizzling stone bowl with seafood, meats, and vegetables, served hot for a flavorful experience.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="menu-section" id="birria-plate">
+  <div class="section-header" style="background-image: linear-gradient(rgba(14,26,16,0.55), rgba(14,26,16,0.8)), url("https://d2gqo3h0psesgi.cloudfront.net/auto/sinalove--tacos-sushi-and-seafood-mfr65sxy278gkb3d.jpg"); background-size: cover; background-position: center;">
+    <span class="section-icon">🥩</span>
+    <h2>Birria Plate</h2>
+    <span class="item-count">1 item</span>
+  </div>
+  <div class="items-grid">
+
+    <div class="item-card has-photo">
+      <div class="item-photo" style="background-image:url('https://d2gqo3h0psesgi.cloudfront.net/auto/sinalove--tacos-sushi-and-seafood-mfr65sxy278gkb3d.jpg')"></div>
+      <div class="item-info">
+        <div class="item-header">
+          <h3 class="item-name">Birria Plate </h3>
+          <span class="item-price">$24.10</span>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="menu-section" id="mexican-tacos">
+  <div class="section-header" style="background-image: linear-gradient(rgba(14,26,16,0.55), rgba(14,26,16,0.8)), url("https://raw.githubusercontent.com/ads-ux/sinalove-website/main/photos/pro-birria.jpg"); background-size: cover; background-position: center;">
+    <span class="section-icon">🌮</span>
+    <h2>Mexican Tacos</h2>
+    <span class="item-count">12 items</span>
+  </div>
+  <div class="items-grid">
+
+    <div class="item-card has-photo">
+      <div class="item-photo" style="background-image:url('https://d2gqo3h0psesgi.cloudfront.net/auto/sinalove--tacos-sushi-and-seafood-fcyxkm5bp6j8zsg3.jpg')"></div>
+      <div class="item-info">
+        <div class="item-header">
+          <h3 class="item-name">Taco De Carne Asada <span class="badge halal">Halal</span></h3>
+          <span class="item-price">$8.35</span>
+        </div>
+        <p class="item-desc">Halal premium.</p>
+      </div>
+    </div>
+
+    <div class="item-card has-photo">
+      <div class="item-photo" style="background-image:url('https://d2gqo3h0psesgi.cloudfront.net/auto/sinalove--tacos-sushi-and-seafood-fj594sphv3gl2nkd.jpg')"></div>
+      <div class="item-info">
+        <div class="item-header">
+          <h3 class="item-name">Taco De Arrachera <span class="badge halal">Halal</span></h3>
+          <span class="item-price">$13.60</span>
+        </div>
+        <p class="item-desc">Halal premium.</p>
+      </div>
+    </div>
+
+    <div class="item-card has-photo">
+      <div class="item-photo" style="background-image:url('https://d2gqo3h0psesgi.cloudfront.net/auto/sinalove--tacos-sushi-and-seafood-623ygcxfq75jz8kv.jpg')"></div>
+      <div class="item-info">
+        <div class="item-header">
+          <h3 class="item-name">Taco De Birria <span class="badge halal">Halal</span></h3>
+          <span class="item-price">$9.40</span>
+        </div>
+        <p class="item-desc">Halal premium.</p>
+      </div>
+    </div>
+
+    <div class="item-card has-photo">
+      <div class="item-photo" style="background-image:url('https://d2gqo3h0psesgi.cloudfront.net/auto/sinalove--tacos-sushi-and-seafood-x83lyncphfdr9v4b.jpg')"></div>
+      <div class="item-info">
+        <div class="item-header">
+          <h3 class="item-name">Taco De Chorizo </h3>
+          <span class="item-price">$8.35</span>
+        </div>
+        
+      </div>
+    </div>
+
+    <div class="item-card has-photo">
+      <div class="item-photo" style="background-image:url('https://d2gqo3h0psesgi.cloudfront.net/auto/sinalove--tacos-sushi-and-seafood-zb72qy5phlctkgnx.jpg')"></div>
+      <div class="item-info">
+        <div class="item-header">
+          <h3 class="item-name">Taco De Carnitas </h3>
+          <span class="item-price">$8.35</span>
+        </div>
+        
+      </div>
+    </div>
+
+    <div class="item-card no-photo">
+      
+      <div class="item-info">
+        <div class="item-header">
+          <h3 class="item-name">Taco Chicken </h3>
+          <span class="item-price">$8.35</span>
+        </div>
+        
+      </div>
+    </div>
+
+    <div class="item-card no-photo">
+      
+      <div class="item-info">
+        <div class="item-header">
+          <h3 class="item-name">Carne Asada Quesadilla <span class="badge">Quesadilla</span></h3>
+          <span class="item-price">$24.10</span>
+        </div>
+        
+      </div>
+    </div>
+
+    <div class="item-card no-photo">
+      
+      <div class="item-info">
+        <div class="item-header">
+          <h3 class="item-name">Arrachera Quesadilla <span class="badge">Quesadilla</span></h3>
+          <span class="item-price">$29.35</span>
+        </div>
+        
+      </div>
+    </div>
+
+    <div class="item-card no-photo">
+      
+      <div class="item-info">
+        <div class="item-header">
+          <h3 class="item-name">Birria Quesadilla <span class="badge">Quesadilla</span></h3>
+          <span class="item-price">$18.85</span>
+        </div>
+        
+      </div>
+    </div>
+
+    <div class="item-card no-photo">
+      
+      <div class="item-info">
+        <div class="item-header">
+          <h3 class="item-name">Chorizo Quesadilla <span class="badge">Quesadilla</span></h3>
+          <span class="item-price">$22.00</span>
+        </div>
+        
+      </div>
+    </div>
+
+    <div class="item-card no-photo">
+      
+      <div class="item-info">
+        <div class="item-header">
+          <h3 class="item-name">Carnitas Quesadilla <span class="badge">Quesadilla</span></h3>
+          <span class="item-price">$22.00</span>
+        </div>
+        
+      </div>
+    </div>
+
+    <div class="item-card no-photo">
+      
+      <div class="item-info">
+        <div class="item-header">
+          <h3 class="item-name">Chicken Quesadilla <span class="badge">Quesadilla</span></h3>
+          <span class="item-price">$22.00</span>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="menu-section" id="seafood-tacos">
+  <div class="section-header" style="background-image: linear-gradient(rgba(14,26,16,0.55), rgba(14,26,16,0.8)), url("https://d2gqo3h0psesgi.cloudfront.net/auto/sinalove--tacos-sushi-and-seafood-r5q7kpbgvh32ytms.jpg"); background-size: cover; background-position: center;">
+    <span class="section-icon">🐟</span>
+    <h2>Seafood Tacos</h2>
+    <span class="item-count">6 items</span>
+  </div>
+  <div class="items-grid">
+
+    <div class="item-card no-photo">
+      
+      <div class="item-info">
+        <div class="item-header">
+          <h3 class="item-name">Shrimp Taco </h3>
+          <span class="item-price">$10.45</span>
+        </div>
+        
+      </div>
+    </div>
+
+    <div class="item-card has-photo">
+      <div class="item-photo" style="background-image:url('https://d2gqo3h0psesgi.cloudfront.net/auto/sinalove--tacos-sushi-and-seafood-y5v9glqk4jczbdhp.jpg')"></div>
+      <div class="item-info">
+        <div class="item-header">
+          <h3 class="item-name">Baja Fish Taco </h3>
+          <span class="item-price">$8.35</span>
+        </div>
+        
+      </div>
+    </div>
+
+    <div class="item-card has-photo">
+      <div class="item-photo" style="background-image:url('https://d2gqo3h0psesgi.cloudfront.net/auto/sinalove--tacos-sushi-and-seafood-r5q7kpbgvh32ytms.jpg')"></div>
+      <div class="item-info">
+        <div class="item-header">
+          <h3 class="item-name">Gobernador Taco </h3>
+          <span class="item-price">$11.50</span>
+        </div>
+        
+      </div>
+    </div>
+
+    <div class="item-card no-photo">
+      
+      <div class="item-info">
+        <div class="item-header">
+          <h3 class="item-name">Shrimp Quesadilla <span class="badge">Quesadilla</span></h3>
+          <span class="item-price">$22.00</span>
+        </div>
+        
+      </div>
+    </div>
+
+    <div class="item-card no-photo">
+      
+      <div class="item-info">
+        <div class="item-header">
+          <h3 class="item-name">Baja Fish Quesadilla <span class="badge">Quesadilla</span></h3>
+          <span class="item-price">$19.90</span>
+        </div>
+        
+      </div>
+    </div>
+
+    <div class="item-card no-photo">
+      
+      <div class="item-info">
+        <div class="item-header">
+          <h3 class="item-name">Gobernador Quesadilla <span class="badge">Quesadilla</span></h3>
+          <span class="item-price">$24.10</span>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="menu-section" id="seafood-fresh">
+  <div class="section-header" style="background-image: linear-gradient(rgba(14,26,16,0.55), rgba(14,26,16,0.8)), url("https://d2gqo3h0psesgi.cloudfront.net/auto/sinalove--tacos-sushi-and-seafood-hvqkjtnd5p2slcbz.jpg"); background-size: cover; background-position: center;">
+    <span class="section-icon">🍋</span>
+    <h2>Seafood Fresh</h2>
+    <span class="item-count">7 items</span>
+  </div>
+  <div class="items-grid">
+
+    <div class="item-card no-photo">
+      
+      <div class="item-info">
+        <div class="item-header">
+          <h3 class="item-name">Toast Shrimp Ceviche </h3>
+          <span class="item-price">$14.65</span>
+        </div>
+        
+      </div>
+    </div>
+
+    <div class="item-card has-photo">
+      <div class="item-photo" style="background-image:url('https://d2gqo3h0psesgi.cloudfront.net/auto/sinalove--tacos-sushi-and-seafood-hvqkjtnd5p2slcbz.jpg')"></div>
+      <div class="item-info">
+        <div class="item-header">
+          <h3 class="item-name">Toast Mango Tuna </h3>
+          <span class="item-price">$15.70</span>
+        </div>
+        <p class="item-desc">With cucumber, tomato, onion, cilantro.</p>
+      </div>
+    </div>
+
+    <div class="item-card no-photo">
+      
+      <div class="item-info">
+        <div class="item-header">
+          <h3 class="item-name">Toast Shrimp With Green Aguachile Sauce </h3>
+          <span class="item-price">$16.75</span>
+        </div>
+        
+      </div>
+    </div>
+
+    <div class="item-card no-photo">
+      
+      <div class="item-info">
+        <div class="item-header">
+          <h3 class="item-name">Toast Shrimp With Black Aguachile Sauce </h3>
+          <span class="item-price">$16.75</span>
+        </div>
+        
+      </div>
+    </div>
+
+    <div class="item-card no-photo">
+      
+      <div class="item-info">
+        <div class="item-header">
+          <h3 class="item-name">Ceviche Culichi </h3>
+          <span class="item-price">$31.45</span>
+        </div>
+        
+      </div>
+    </div>
+
+    <div class="item-card no-photo">
+      
+      <div class="item-info">
+        <div class="item-header">
+          <h3 class="item-name">Fish Ceviche Olas Altas </h3>
+          <span class="item-price">$31.45</span>
+        </div>
+        
+      </div>
+    </div>
+
+    <div class="item-card no-photo">
+      
+      <div class="item-info">
+        <div class="item-header">
+          <h3 class="item-name">Ceviche Mi Mazatlan </h3>
+          <span class="item-price">$34.60</span>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="menu-section" id="seafood-cocktail">
+  <div class="section-header" style="background-image: linear-gradient(rgba(14,26,16,0.55), rgba(14,26,16,0.8)), url("https://d2gqo3h0psesgi.cloudfront.net/auto/sinalove--tacos-sushi-and-seafood-ytrvp9zn4k8f5hs6.jpg"); background-size: cover; background-position: center;">
+    <span class="section-icon">🦐</span>
+    <h2>Seafood Cocktail</h2>
+    <span class="item-count">3 items</span>
+  </div>
+  <div class="items-grid">
+
+    <div class="item-card no-photo">
+      
+      <div class="item-info">
+        <div class="item-header">
+          <h3 class="item-name">Shrimp Cocktail </h3>
+          <span class="item-price">$29.35</span>
+        </div>
+        
+      </div>
+    </div>
+
+    <div class="item-card no-photo">
+      
+      <div class="item-info">
+        <div class="item-header">
+          <h3 class="item-name">Shrimp And Octopus Cocktail </h3>
+          <span class="item-price">$31.45</span>
+        </div>
+        
+      </div>
+    </div>
+
+    <div class="item-card has-photo">
+      <div class="item-photo" style="background-image:url('https://d2gqo3h0psesgi.cloudfront.net/auto/sinalove--tacos-sushi-and-seafood-ytrvp9zn4k8f5hs6.jpg')"></div>
+      <div class="item-info">
+        <div class="item-header">
+          <h3 class="item-name">Campechana </h3>
+          <span class="item-price">$34.60</span>
+        </div>
+        <p class="item-desc">Cooked shrimp, pickled shrimp, octopus, fish and scallops.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="menu-section" id="seafood-aguachiles">
+  <div class="section-header" style="background-image: linear-gradient(rgba(14,26,16,0.55), rgba(14,26,16,0.8)), url("https://d2gqo3h0psesgi.cloudfront.net/auto/sinalove--tacos-sushi-and-seafood-pk62v5zcd74fx9t3.jpg"); background-size: cover; background-position: center;">
+    <span class="section-icon">🌶️</span>
+    <h2>Seafood Aguachiles</h2>
+    <span class="item-count">2 items</span>
+  </div>
+  <div class="items-grid">
+
+    <div class="item-card has-photo">
+      <div class="item-photo" style="background-image:url('https://d2gqo3h0psesgi.cloudfront.net/auto/sinalove--tacos-sushi-and-seafood-pk62v5zcd74fx9t3.jpg')"></div>
+      <div class="item-info">
+        <div class="item-header">
+          <h3 class="item-name">Verde Isla Cortez </h3>
+          <span class="item-price">$29.35</span>
+        </div>
+        <p class="item-desc">Raw shrimp marinated with lime and green Chile.</p>
+      </div>
+    </div>
+
+    <div class="item-card no-photo">
+      
+      <div class="item-info">
+        <div class="item-header">
+          <h3 class="item-name">Charro Negro </h3>
+          <span class="item-price">$29.35</span>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="menu-section" id="sushi-natural">
+  <div class="section-header" style="background-image: linear-gradient(rgba(14,26,16,0.55), rgba(14,26,16,0.8)), url("https://raw.githubusercontent.com/ads-ux/sinalove-website/main/photos/pro-sushi.jpg"); background-size: cover; background-position: center;">
+    <span class="section-icon">🍣</span>
+    <h2>Sushi Natural</h2>
+    <span class="item-count">2 items</span>
+  </div>
+  <div class="items-grid">
+
+    <div class="item-card no-photo">
+      
+      <div class="item-info">
+        <div class="item-header">
+          <h3 class="item-name">California Roll </h3>
+          <span class="item-price">$19.90</span>
+        </div>
+        
+      </div>
+    </div>
+
+    <div class="item-card no-photo">
+      
+      <div class="item-info">
+        <div class="item-header">
+          <h3 class="item-name">Avocado Roll </h3>
+          <span class="item-price">$20.95</span>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="menu-section" id="sushi-breaded">
+  <div class="section-header" style="background-image: linear-gradient(rgba(14,26,16,0.55), rgba(14,26,16,0.8)), url("https://d2gqo3h0psesgi.cloudfront.net/auto/sinalove--tacos-sushi-and-seafood-xdnft5p6mcs389v4.jpg"); background-size: cover; background-position: center;">
+    <span class="section-icon">🍱</span>
+    <h2>Sushi Breaded</h2>
+    <span class="item-count">3 items</span>
+  </div>
+  <div class="items-grid">
+
+    <div class="item-card has-photo">
+      <div class="item-photo" style="background-image:url('https://d2gqo3h0psesgi.cloudfront.net/auto/sinalove--tacos-sushi-and-seafood-8bszytjrcg5vn2ph.jpg')"></div>
+      <div class="item-info">
+        <div class="item-header">
+          <h3 class="item-name">M&T </h3>
+          <span class="item-price">$20.95</span>
+        </div>
+        <p class="item-desc">Inside: Avocado, cream cheese, shrimp and beef.</p>
+      </div>
+    </div>
+
+    <div class="item-card has-photo">
+      <div class="item-photo" style="background-image:url('https://d2gqo3h0psesgi.cloudfront.net/auto/sinalove--tacos-sushi-and-seafood-8q6s2hjbxtl3v5cn.jpg')"></div>
+      <div class="item-info">
+        <div class="item-header">
+          <h3 class="item-name">Cordon Blue </h3>
+          <span class="item-price">$20.95</span>
+        </div>
+        <p class="item-desc">Inside: cucumber, avocado, cream cheese, bacon and chicken. Outside: melted mozzarella cheese.</p>
+      </div>
+    </div>
+
+    <div class="item-card has-photo">
+      <div class="item-photo" style="background-image:url('https://d2gqo3h0psesgi.cloudfront.net/auto/sinalove--tacos-sushi-and-seafood-xdnft5p6mcs389v4.jpg')"></div>
+      <div class="item-info">
+        <div class="item-header">
+          <h3 class="item-name">Toro Roll </h3>
+          <span class="item-price">$25.15</span>
+        </div>
+        <p class="item-desc">Inside: cucumber, avocado, cream cheese, premium beef, and grilled chili. Outside: melted mozzarella cheese.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="menu-section" id="sushi-special">
+  <div class="section-header" style="background-image: linear-gradient(rgba(14,26,16,0.55), rgba(14,26,16,0.8)), url("https://d2gqo3h0psesgi.cloudfront.net/auto/sinalove--tacos-sushi-and-seafood-ylqvbfhcjs6pn73d.jpg"); background-size: cover; background-position: center;">
+    <span class="section-icon">⭐</span>
+    <h2>Sushi Special</h2>
+    <span class="item-count">5 items</span>
+  </div>
+  <div class="items-grid">
+
+    <div class="item-card no-photo">
+      
+      <div class="item-info">
+        <div class="item-header">
+          <h3 class="item-name">Culichi Roll </h3>
+          <span class="item-price">$28.30</span>
+        </div>
+        
+      </div>
+    </div>
+
+    <div class="item-card has-photo">
+      <div class="item-photo" style="background-image:url('https://d2gqo3h0psesgi.cloudfront.net/auto/sinalove--tacos-sushi-and-seafood-ylqvbfhcjs6pn73d.jpg')"></div>
+      <div class="item-info">
+        <div class="item-header">
+          <h3 class="item-name">Joyelo Roll </h3>
+          <span class="item-price">$27.25</span>
+        </div>
+        <p class="item-desc">Inside: cucumber, avocado, cream cheese, and shrimp. Outside: wrapped in shrimp and topped with spicy kanikama, masago, sesame s</p>
+      </div>
+    </div>
+
+    <div class="item-card has-photo">
+      <div class="item-photo" style="background-image:url('https://d2gqo3h0psesgi.cloudfront.net/auto/sinalove--tacos-sushi-and-seafood-h6l9s3qmpy2nt4v8.jpg')"></div>
+      <div class="item-info">
+        <div class="item-header">
+          <h3 class="item-name">Macho Roll </h3>
+          <span class="item-price">$22.00</span>
+        </div>
+        <p class="item-desc">Inside: avocado, cream cheese, and breaded shrimp. Outside: melted cheese and a plantain coating.</p>
+      </div>
+    </div>
+
+    <div class="item-card no-photo">
+      
+      <div class="item-info">
+        <div class="item-header">
+          <h3 class="item-name">Mexican Roll </h3>
+          <span class="item-price">$22.00</span>
+        </div>
+        
+      </div>
+    </div>
+
+    <div class="item-card no-photo">
+      
+      <div class="item-info">
+        <div class="item-header">
+          <h3 class="item-name">I Love Salmon </h3>
+          <span class="item-price">$25.15</span>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="menu-section" id="vegan-menu">
+  <div class="section-header" style="background-image: linear-gradient(rgba(14,26,16,0.55), rgba(14,26,16,0.8)), url("https://d2gqo3h0psesgi.cloudfront.net/auto/sinalove--tacos-sushi-and-seafood-9kcr3vnx7z8dy52p.jpg"); background-size: cover; background-position: center;">
+    <span class="section-icon">🌿</span>
+    <h2>Vegan Menu</h2>
+    <span class="item-count">3 items</span>
+  </div>
+  <div class="items-grid">
+
+    <div class="item-card no-photo">
+      
+      <div class="item-info">
+        <div class="item-header">
+          <h3 class="item-name">Veggi Roll </h3>
+          <span class="item-price">$17.80</span>
+        </div>
+        
+      </div>
+    </div>
+
+    <div class="item-card no-photo">
+      
+      <div class="item-info">
+        <div class="item-header">
+          <h3 class="item-name">Zucchini Taco </h3>
+          <span class="item-price">$8.35</span>
+        </div>
+        
+      </div>
+    </div>
+
+    <div class="item-card has-photo">
+      <div class="item-photo" style="background-image:url('https://d2gqo3h0psesgi.cloudfront.net/auto/sinalove--tacos-sushi-and-seafood-9kcr3vnx7z8dy52p.jpg')"></div>
+      <div class="item-info">
+        <div class="item-header">
+          <h3 class="item-name">Mushroom Taco </h3>
+          <span class="item-price">$8.35</span>
+        </div>
+        <p class="item-desc">Mushrooms with grilled onions and cheese.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="menu-section" id="kids-menu">
+  <div class="section-header" style="background: var(--green);">
+    <span class="section-icon">⭐</span>
+    <h2>Kids Menu</h2>
+    <span class="item-count">3 items</span>
+  </div>
+  <div class="items-grid">
+
+    <div class="item-card no-photo">
+      
+      <div class="item-info">
+        <div class="item-header">
+          <h3 class="item-name">Cheese Quesadilla 6 inches <span class="badge">Quesadilla</span></h3>
+          <span class="item-price">$8.40</span>
+        </div>
+        
+      </div>
+    </div>
+
+    <div class="item-card no-photo">
+      
+      <div class="item-info">
+        <div class="item-header">
+          <h3 class="item-name">Chicken Quesadilla 6 inches <span class="badge">Quesadilla</span></h3>
+          <span class="item-price">$12.55</span>
+        </div>
+        
+      </div>
+    </div>
+
+    <div class="item-card no-photo">
+      
+      <div class="item-info">
+        <div class="item-header">
+          <h3 class="item-name">Chicken Fingers (9oz) </h3>
+          <span class="item-price">$12.55</span>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="menu-section" id="extras">
+  <div class="section-header" style="background: var(--green);">
+    <span class="section-icon">➕</span>
+    <h2>Extras</h2>
+    <span class="item-count">5 items</span>
+  </div>
+  <div class="items-grid">
+
+    <div class="item-card no-photo">
+      
+      <div class="item-info">
+        <div class="item-header">
+          <h3 class="item-name">Chips & Salsa </h3>
+          <span class="item-price">$3.15</span>
+        </div>
+        
+      </div>
+    </div>
+
+    <div class="item-card no-photo">
+      
+      <div class="item-info">
+        <div class="item-header">
+          <h3 class="item-name">Side of Rice </h3>
+          <span class="item-price">$3.15</span>
+        </div>
+        
+      </div>
+    </div>
+
+    <div class="item-card no-photo">
+      
+      <div class="item-info">
+        <div class="item-header">
+          <h3 class="item-name">Hot Sauce 8oz </h3>
+          <span class="item-price">$26.25</span>
+        </div>
+        
+      </div>
+    </div>
+
+    <div class="item-card no-photo">
+      
+      <div class="item-info">
+        <div class="item-header">
+          <h3 class="item-name">Chipotle 8oz </h3>
+          <span class="item-price">$26.25</span>
+        </div>
+        
+      </div>
+    </div>
+
+    <div class="item-card no-photo">
+      
+      <div class="item-info">
+        <div class="item-header">
+          <h3 class="item-name">Tatemada 8oz </h3>
+          <span class="item-price">$21.00</span>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="menu-section" id="desserts">
+  <div class="section-header" style="background: var(--green);">
+    <span class="section-icon">🍮</span>
+    <h2>Desserts</h2>
+    <span class="item-count">2 items</span>
+  </div>
+  <div class="items-grid">
+
+    <div class="item-card no-photo">
+      
+      <div class="item-info">
+        <div class="item-header">
+          <h3 class="item-name">Arroz Con Leche </h3>
+          <span class="item-price">$9.98</span>
+        </div>
+        
+      </div>
+    </div>
+
+    <div class="item-card no-photo">
+      
+      <div class="item-info">
+        <div class="item-header">
+          <h3 class="item-name">Lotus Biscoff Lemon Dream </h3>
+          <span class="item-price">$13.60</span>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="menu-section" id="drinks">
+  <div class="section-header" style="background: var(--green);">
+    <span class="section-icon">🥤</span>
+    <h2>Drinks</h2>
+    <span class="item-count">4 items</span>
+  </div>
+  <div class="items-grid">
+
+    <div class="item-card no-photo">
+      
+      <div class="item-info">
+        <div class="item-header">
+          <h3 class="item-name">Mexican Coca-Cola 500ml </h3>
+          <span class="item-price">$7.88</span>
+        </div>
+        
+      </div>
+    </div>
+
+    <div class="item-card no-photo">
+      
+      <div class="item-info">
+        <div class="item-header">
+          <h3 class="item-name">Agua De Jamaica </h3>
+          <span class="item-price">$4.08</span>
+        </div>
+        
+      </div>
+    </div>
+
+    <div class="item-card no-photo">
+      
+      <div class="item-info">
+        <div class="item-header">
+          <h3 class="item-name">Canned Soda </h3>
+          <span class="item-price">$3.10</span>
+        </div>
+        
+      </div>
+    </div>
+
+    <div class="item-card no-photo">
+      
+      <div class="item-info">
+        <div class="item-header">
+          <h3 class="item-name">Jarritos </h3>
+          <span class="item-price">$4.99</span>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+    <div class="order-cta">
+      <div>
+        <h3>Ready to Order?</h3>
+        <p>Order online for pickup or delivery — or come visit us at 447 Elizabeth St</p>
+      </div>
+      <a href="https://www.sinalovetacossushiandseafoodon.com/sinalove--tacos-sushi-and-seafood/menu/447-Elizabeth-St/" target="_blank">Order Now →</a>
+    </div>
+  </div>
+</div>
+
+<script>
+// Highlight active category in sidebar as user scrolls
+const sections = document.querySelectorAll('.menu-section');
+const links = document.querySelectorAll('.cat-link, .mobile-cat-pill');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const id = entry.target.id;
+      links.forEach(l => {
+        l.classList.toggle('active', l.getAttribute('href') === '#' + id);
+      });
+    }
+  });
+}, {rootMargin: '-20% 0px -70% 0px'});
+
+sections.forEach(s => observer.observe(s));
+</script>
+</body>
+</html>

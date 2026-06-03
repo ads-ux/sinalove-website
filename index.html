@@ -41,7 +41,7 @@
   "servesCuisine": ["Mexican", "Sinaloan", "Seafood", "Sushi", "Tacos", "Ceviche"],
   "priceRange": "$$",
   "currenciesAccepted": "CAD",
-  "menu": "https://sinalovemexican.bycalibre.ca/menu",
+  "menu": "https://ads-ux.github.io/sinalove-website/menu.html",
   "image": [
     "https://ads-ux.github.io/sinalove-website/photos/hero-flambe-sushi.webp",
     "https://ads-ux.github.io/sinalove-website/photos/birria-tacos.jpg",
@@ -185,25 +185,21 @@ nav.scrolled{background:var(--dark);box-shadow:0 2px 20px rgba(0,0,0,.4)}
 .showcase-name{font-family:'Playfair Display',serif;font-size:26px;font-weight:700;color:white;line-height:1.2;margin-bottom:8px}
 .showcase-desc{font-size:14px;color:rgba(255,255,255,.65);line-height:1.5}
 
-/* MENU */
-.menu-section{background:var(--green);padding:90px 48px}
-.menu-section .section-title{color:white}
-.menu-section p.sub{font-size:17px;color:rgba(255,255,255,.55);font-weight:300;margin-top:4px}
-.menu-tabs{display:flex;gap:8px;margin:40px 0 0;flex-wrap:wrap}
-.tab-btn{padding:9px 20px;border-radius:100px;border:1.5px solid rgba(255,255,255,.2);background:transparent;color:rgba(255,255,255,.6);font-size:13px;font-weight:500;cursor:pointer;transition:all .2s;font-family:'Inter',sans-serif}
-.tab-btn:hover{border-color:rgba(255,255,255,.5);color:white}
-.tab-btn.active{background:var(--gold);border-color:var(--gold);color:white}
-.menu-panel{display:none;padding-top:32px}
-.menu-panel.active{display:block}
-.menu-panel-photo{width:100%;height:260px;object-fit:cover;border-radius:4px;margin-bottom:28px}
-.menu-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px}
-.menu-item{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:20px;display:flex;flex-direction:column;gap:6px;transition:background .2s}
-.menu-item:hover{background:rgba(255,255,255,.09)}
-.menu-item-header{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
-.menu-item-name{font-size:16px;font-weight:600;color:white;line-height:1.3}
-.menu-item-price{font-size:15px;font-weight:600;color:var(--gold);white-space:nowrap}
-.menu-item-desc{font-size:13px;color:rgba(255,255,255,.5);line-height:1.5}
-.menu-item-tag{display:inline-block;font-size:11px;padding:2px 8px;border-radius:100px;background:rgba(200,145,42,.2);color:var(--gold-light);font-weight:500;width:fit-content}
+/* MENU TEASER */
+.menu-teaser{background:var(--green);padding:90px 48px}
+.menu-teaser .section-title{color:white}
+.menu-teaser p.sub{font-size:17px;color:rgba(255,255,255,.55);font-weight:300;margin-top:4px}
+.teaser-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px}
+.teaser-card{border-radius:10px;overflow:hidden;text-decoration:none;display:block;position:relative;box-shadow:0 4px 20px rgba(0,0,0,.3);transition:transform .2s,box-shadow .2s}
+.teaser-card:hover{transform:translateY(-4px);box-shadow:0 10px 32px rgba(0,0,0,.4)}
+.teaser-card img{width:100%;height:260px;object-fit:cover;display:block;transition:transform .5s}
+.teaser-card:hover img{transform:scale(1.05)}
+.teaser-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(8,16,10,.88) 0%,rgba(8,16,10,.15) 60%,transparent 100%);padding:24px;display:flex;flex-direction:column;justify-content:flex-end}
+.teaser-cat{font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
+.teaser-name{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:white;line-height:1.2;margin-bottom:6px}
+.teaser-desc{font-size:13px;color:rgba(255,255,255,.65);line-height:1.4}
+.menu-teaser-cta{text-align:center;margin-top:48px}
+
 .menu-cta{text-align:center;margin-top:48px}
 
 /* BRUNCH */
@@ -307,7 +303,7 @@ footer a:hover{color:var(--gold)}
   <a href="#" class="nav-logo"><span>Sinalove</span></a>
   <ul class="nav-links">
     <li><a href="#about">Our Story</a></li>
-    <li><a href="#menu">Menu</a></li>
+    <li><a href="menu.html">Menu</a></li>
     <li><a href="#brunch">Brunch</a></li>
     <li><a href="#hours">Hours</a></li>
     <li><a href="https://sinalovemexican.bycalibre.ca/pickup" target="_blank" class="nav-cta">Order Online</a></li>
@@ -318,7 +314,7 @@ footer a:hover{color:var(--gold)}
 </nav>
 <div class="mobile-menu" id="mobileMenu">
   <a href="#about" onclick="closeMobile()">Our Story</a>
-  <a href="#menu" onclick="closeMobile()">Menu</a>
+  <a href="menu.html" onclick="closeMobile()">Menu</a>
   <a href="#brunch" onclick="closeMobile()">Brunch</a>
   <a href="#hours" onclick="closeMobile()">Hours</a>
   <a href="https://sinalovemexican.bycalibre.ca/pickup" target="_blank" class="m-order" onclick="closeMobile()">Order Online</a>
@@ -443,119 +439,39 @@ footer a:hover{color:var(--gold)}
 </div>
 
 <!-- MENU -->
-<section class="menu-section" id="menu">
+<section class="menu-teaser" id="menu">
   <div class="container">
     <span class="section-label">What We Serve</span>
     <h2 class="section-title">The Menu</h2>
     <p class="sub">Crafted fresh daily from Mexico's Pacific coast traditions.</p>
-    <div class="menu-tabs">
-      <button class="tab-btn active" onclick="showTab(event,'appetizers')">Appetizers</button>
-      <button class="tab-btn" onclick="showTab(event,'tacos')">Tacos &amp; Quesadillas</button>
-      <button class="tab-btn" onclick="showTab(event,'seafood')">Ceviches &amp; Aguachiles</button>
-      <button class="tab-btn" onclick="showTab(event,'sushi')">Sushi</button>
-      <button class="tab-btn" onclick="showTab(event,'bowls')">Bowls</button>
-      <button class="tab-btn" onclick="showTab(event,'vegan')">Vegan</button>
-      <button class="tab-btn" onclick="showTab(event,'desserts')">Desserts &amp; Drinks</button>
+    <div class="teaser-grid">
+      <a href="menu.html" class="teaser-card">
+        <img src="photos/pro-birria.jpg" alt="Birria tacos at Sinalove Guelph" loading="lazy">
+        <div class="teaser-overlay">
+          <span class="teaser-cat">Mexican Tacos</span>
+          <div class="teaser-name">Birria Tacos</div>
+          <div class="teaser-desc">Slow-braised beef, consommé for dipping, fresh cilantro &amp; onion</div>
+        </div>
+      </a>
+      <a href="menu.html#seafood-tacos" class="teaser-card">
+        <img src="photos/pro-tacos.jpg" alt="Gobernador seafood taco at Sinalove" loading="lazy">
+        <div class="teaser-overlay">
+          <span class="teaser-cat">Seafood Tacos</span>
+          <div class="teaser-name">Gobernador Taco</div>
+          <div class="teaser-desc">Shrimp &amp; melted cheese on a griddled flour tortilla — a Sinaloan classic</div>
+        </div>
+      </a>
+      <a href="menu.html#sushi-special" class="teaser-card">
+        <img src="photos/pro-sushi.jpg" alt="Sinaloan sushi roll at Sinalove" loading="lazy">
+        <div class="teaser-overlay">
+          <span class="teaser-cat">Sinaloan Sushi</span>
+          <div class="teaser-name">Mexico Meets Japan</div>
+          <div class="teaser-desc">Pacific coast rolls with Mexican flavours — cream cheese, shrimp &amp; house sauces</div>
+        </div>
+      </a>
     </div>
-
-    <div class="menu-panel active" id="tab-appetizers">
-      <img src="photos/seafood-platter.webp" alt="Appetizers at Sinalove" class="menu-panel-photo">
-      <div class="menu-grid">
-        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Rock Shrimp</span><span class="menu-item-price">$15.95</span></div><div class="menu-item-desc">6 crispy shrimp on white rice with sriracha mayo sauce.</div></div>
-        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Cheese Kushiages</span><span class="menu-item-price">$13.95</span></div><div class="menu-item-desc">Deep-fried cheese skewers, 4 pieces.</div><span class="menu-item-tag">Fan Favourite</span></div>
-        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Ebi Cheese</span><span class="menu-item-price">$17.95</span></div><div class="menu-item-desc">6 shrimp stuffed with cream cheese, breaded on the outside.</div></div>
-        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Bacon Shrimp</span><span class="menu-item-price">$22.95</span></div><div class="menu-item-desc">Shrimp stuffed with mozzarella and wrapped in bacon.</div></div>
-        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Mexican Chorizo &amp; Cheese</span><span class="menu-item-price">$15.95</span></div><div class="menu-item-desc">Ground pork with chili and spices, topped with melted mozzarella.</div></div>
-        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Guacamole &amp; Chips</span><span class="menu-item-price">$15.95</span></div><div class="menu-item-desc">Fresh house-made guacamole with tortilla chips.</div></div>
-      </div>
-    </div>
-
-    <div class="menu-panel" id="tab-tacos">
-      <img src="photos/birria-tacos.jpg" alt="Birria tacos at Sinalove — slow-braised halal beef with consommé" class="menu-panel-photo">
-      <div class="menu-grid">
-        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Taco de Birria</span><span class="menu-item-price">$9.95+</span></div><div class="menu-item-desc">Slow-braised beef with rich consommé for dipping.</div><span class="menu-item-tag">Halal · Must Try</span></div>
-        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Taco de Arrachera</span><span class="menu-item-price">$12.95</span></div><div class="menu-item-desc">Premium skirt steak on a soft corn tortilla.</div><span class="menu-item-tag">Halal Premium</span></div>
-        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Baja Fish Taco</span><span class="menu-item-price">$7.95</span></div><div class="menu-item-desc">Crispy battered fish, cabbage, pico de gallo, creamy sauce.</div><span class="menu-item-tag">#1 Most Liked</span></div>
-        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Gobernador Taco</span><span class="menu-item-price">$10.95</span></div><div class="menu-item-desc">Shrimp and melted cheese — the classic Sinaloan taco.</div></div>
-        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Octopus Taco</span><span class="menu-item-price">$12.95</span></div><div class="menu-item-desc">Tender grilled octopus on a corn tortilla.</div></div>
-        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Shrimp Taco</span><span class="menu-item-price">$9.95</span></div><div class="menu-item-desc">Fresh shrimp on a soft corn tortilla.</div></div>
-        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Taco de Carnitas</span><span class="menu-item-price">$7.95</span></div><div class="menu-item-desc">Shredded pork on a soft corn tortilla, topped with cilantro.</div></div>
-        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Taco Chicken</span><span class="menu-item-price">$7.95</span></div><div class="menu-item-desc">Corn tortilla filled with grilled chicken.</div></div>
-        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Arrachera Quesadilla</span><span class="menu-item-price">$27.95</span></div><div class="menu-item-desc">Premium skirt steak and melted cheese.</div><span class="menu-item-tag">Halal Premium</span></div>
-        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Birria Quesadilla</span><span class="menu-item-price">$27.95+</span></div><div class="menu-item-desc">Slow-braised birria beef with melted cheese.</div><span class="menu-item-tag">Halal</span></div>
-        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Octopus Quesadilla</span><span class="menu-item-price">$24.95</span></div><div class="menu-item-desc">Tender octopus with melted cheese in a tortilla.</div></div>
-        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Gobernador Quesadilla</span><span class="menu-item-price">$22.95</span></div><div class="menu-item-desc">Shrimp and cheese — the Gobernador, quesadilla-style.</div></div>
-      </div>
-    </div>
-
-    <div class="menu-panel" id="tab-seafood">
-      <img src="photos/mango-tuna-ceviche.webp" alt="Fresh ceviche at Sinalove" class="menu-panel-photo">
-      <div class="menu-grid">
-        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Verde Isla Cortez</span><span class="menu-item-price">$27.95</span></div><div class="menu-item-desc">Raw shrimp marinated in fresh lime and green chile. Authentic Pacific-style aguachile.</div><span class="menu-item-tag">Aguachile · Signature</span></div>
-        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Charro Negro</span><span class="menu-item-price">$27.95</span></div><div class="menu-item-desc">Raw shrimp marinated with lime and black sauce.</div><span class="menu-item-tag">Aguachile</span></div>
-        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Ceviche Mi Mazatlán</span><span class="menu-item-price">$32.95</span></div><div class="menu-item-desc">Cooked shrimp, pickled shrimp, octopus, and mango with cucumber, tomato, onion, and cilantro.</div><span class="menu-item-tag">Showstopper</span></div>
-        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Ceviche Culichi</span><span class="menu-item-price">$29.95</span></div><div class="menu-item-desc">Shrimp and mango with cucumber, tomato, onion, cilantro.</div></div>
-        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Fish Ceviche Olas Altas</span><span class="menu-item-price">$29.95</span></div><div class="menu-item-desc">Basa fish and mango with cucumber, tomato, onion, coriander.</div></div>
-        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Toast Mango Tuna</span><span class="menu-item-price">$14.95</span></div><div class="menu-item-desc">Tuna and mango with cucumber, tomato, onion, cilantro on toast.</div></div>
-        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Campechana</span><span class="menu-item-price">$32.95</span></div><div class="menu-item-desc">Cooked shrimp, pickled shrimp, octopus, fish, and scallops. The ultimate seafood cocktail.</div><span class="menu-item-tag">Cocktail</span></div>
-        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Shrimp &amp; Octopus Cocktail</span><span class="menu-item-price">$29.95</span></div><div class="menu-item-desc">Classic Sinaloan seafood cocktail.</div></div>
-        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Fogon del Pacífico</span><span class="menu-item-price">$53.95</span></div><div class="menu-item-desc">Sizzling stone molcajete with seafood, meats, and vegetables. The table showstopper.</div><span class="menu-item-tag">Molcajete · For Two</span></div>
-      </div>
-    </div>
-
-    <div class="menu-panel" id="tab-sushi">
-      <img src="photos/sushi-golden.webp" alt="Sinaloan sushi at Sinalove Guelph" class="menu-panel-photo">
-      <div class="menu-grid">
-        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Culichi Roll</span><span class="menu-item-price">$26.95</span></div><div class="menu-item-desc">Shrimp, surimi, kanikama, scallop, octopus, spicy mayo, breaded shrimp on top.</div><span class="menu-item-tag">Signature</span></div>
-        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Greñudo Roll</span><span class="menu-item-price">$24.95</span></div><div class="menu-item-desc">Surimi, spicy dressing, breaded shrimp chunks, scallions.</div><span class="menu-item-tag">Fan Favourite</span></div>
-        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Joyelo Roll</span><span class="menu-item-price">$25.95</span></div><div class="menu-item-desc">Wrapped in shrimp, topped with spicy kanikama, masago, sesame seeds.</div></div>
-        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Ery Roll</span><span class="menu-item-price">$25.95</span></div><div class="menu-item-desc">Lined with avocado, topped with octopus, spicy mayonnaise, scallions.</div></div>
-        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Mexican Roll</span><span class="menu-item-price">$20.95</span></div><div class="menu-item-desc">Breaded shrimp with gratinéed top and roasted chili. Where Mexico meets Japan.</div><span class="menu-item-tag">Must Try</span></div>
-        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Toro Roll</span><span class="menu-item-price">$23.95</span></div><div class="menu-item-desc">Premium beef and grilled chili, melted mozzarella outside.</div></div>
-        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">I Love Salmon</span><span class="menu-item-price">$23.95</span></div><div class="menu-item-desc">Salmon, avocado, cream cheese, yellow lemon slices, dots of sriracha.</div></div>
-        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Avocado Roll</span><span class="menu-item-price">$19.95</span></div><div class="menu-item-desc">Lined with avocado, smothered in eel sauce, shrimp inside.</div></div>
-        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">California Roll</span><span class="menu-item-price">$18.95</span></div><div class="menu-item-desc">Cucumber, avocado, cream cheese, and surimi. Natural and sesame seeds outside.</div></div>
-        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Macho Roll</span><span class="menu-item-price">$20.95</span></div><div class="menu-item-desc">Breaded shrimp inside, melted cheese and plantain coating outside.</div></div>
-      </div>
-    </div>
-
-    <div class="menu-panel" id="tab-bowls">
-      <img src="photos/taco-variety.webp" alt="Bowls at Sinalove" class="menu-panel-photo">
-      <div class="menu-grid">
-        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Mixed 3 Proteins Bowl</span><span class="menu-item-price">$25.95</span></div><div class="menu-item-desc">Beef, chicken, and shrimp over white rice with teriyaki sauce, scallions and sesame seeds.</div><span class="menu-item-tag">Best Value</span></div>
-        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Beef Arrachera Teriyaki Bowl</span><span class="menu-item-price">$21.95</span></div><div class="menu-item-desc">Skirt steak with teriyaki sauce over steamed rice.</div></div>
-        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Shrimp Teriyaki Bowl</span><span class="menu-item-price">$15.95</span></div><div class="menu-item-desc">Shrimp tossed in teriyaki sauce, served over rice.</div></div>
-        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Chicken Teriyaki Bowl</span><span class="menu-item-price">$15.95</span></div><div class="menu-item-desc">Grilled chicken in teriyaki sauce, steamed rice, sesame seeds and scallions.</div></div>
-        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Special Gohan Bowl</span><span class="menu-item-price">$13.95</span></div><div class="menu-item-desc">Surimi, avocado, cream cheese, eel sauce, green onion, sesame seeds.</div></div>
-      </div>
-    </div>
-
-    <div class="menu-panel" id="tab-vegan">
-      <img src="photos/ceviche-molcajete.webp" alt="Vegan options at Sinalove" class="menu-panel-photo">
-      <div class="menu-grid">
-        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Veggi Roll</span><span class="menu-item-price">$16.95</span></div><div class="menu-item-desc">Cucumber, avocado, and cheese. Lined with cucumber and rice paper outside.</div></div>
-        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Zucchini Taco</span><span class="menu-item-price">$7.95</span></div><div class="menu-item-desc">Breaded zucchini with melted cheese.</div></div>
-        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Mushroom Taco</span><span class="menu-item-price">$7.95</span></div><div class="menu-item-desc">Grilled mushrooms with caramelized onions and cheese.</div></div>
-        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Guacamole &amp; Chips</span><span class="menu-item-price">$15.95</span></div><div class="menu-item-desc">Fresh house-made guacamole with tortilla chips.</div></div>
-        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Kids Cheese Quesadilla</span><span class="menu-item-price">$8.00</span></div><div class="menu-item-desc">6-inch cheese quesadilla with a side of rice and carrots.</div><span class="menu-item-tag">Kids Menu</span></div>
-      </div>
-    </div>
-
-    <div class="menu-panel" id="tab-desserts">
-      <img src="photos/plantains-dessert.webp" alt="Fried plantains dessert at Sinalove" class="menu-panel-photo">
-      <div class="menu-grid">
-        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Fried Plantains with Ice Cream</span><span class="menu-item-price">$11.95</span></div><div class="menu-item-desc">Caramelized plantains served warm with a scoop of vanilla ice cream.</div><span class="menu-item-tag">Must Try</span></div>
-        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Arroz Con Leche</span><span class="menu-item-price">$9.50</span></div><div class="menu-item-desc">Slow-cooked with cinnamon, sweet raisins, and fragrant star anise.</div><span class="menu-item-tag">Traditional</span></div>
-        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Lotus Biscoff Lemon Dream</span><span class="menu-item-price">$12.95</span></div><div class="menu-item-desc">Sweet and tangy dessert combining Biscoff and lemon.</div></div>
-        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Mexican Coca-Cola</span><span class="menu-item-price">$7.50</span></div><div class="menu-item-desc">500ml glass bottle, real cane sugar recipe.</div></div>
-        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Agua de Jamaica</span><span class="menu-item-price">$3.89</span></div><div class="menu-item-desc">Naturally tart hibiscus water, lightly sweetened.</div></div>
-        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Jarritos</span><span class="menu-item-price">$4.75</span></div><div class="menu-item-desc">Mexican fruit sodas in assorted flavours.</div></div>
-        <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">House Hot Sauce (8oz)</span><span class="menu-item-price">$25.00</span></div><div class="menu-item-desc">Made in-house. Take a bottle home.</div><span class="menu-item-tag">Take Home</span></div>
-      </div>
-    </div>
-
-    <div class="menu-cta">
-      <a href="menu.html" class="btn btn-primary">View Full Menu →</a>
+    <div class="menu-teaser-cta">
+      <a href="menu.html" class="btn btn-primary">View Full Menu — 72 Items →</a>
     </div>
   </div>
 </section>
@@ -701,12 +617,7 @@ const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
   navbar.classList.toggle('scrolled', window.scrollY > 80);
 });
-function showTab(e, tabId) {
-  document.querySelectorAll('.menu-panel').forEach(p => p.classList.remove('active'));
-  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-  document.getElementById('tab-' + tabId).classList.add('active');
-  e.currentTarget.classList.add('active');
-}
+
 const hamburger = document.getElementById('hamburger');
 const mobileMenu = document.getElementById('mobileMenu');
 hamburger.addEventListener('click', () => {

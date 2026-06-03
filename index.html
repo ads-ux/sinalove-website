@@ -109,6 +109,7 @@ body{font-family:'Inter',sans-serif;background:var(--cream);color:var(--text);li
 nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:18px 48px;display:flex;align-items:center;justify-content:space-between;transition:all .3s}
 nav.scrolled{background:var(--dark);box-shadow:0 2px 20px rgba(0,0,0,.4)}
 .nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.nav-logo img{height:42px;width:42px;border-radius:50%;object-fit:cover}
 .nav-logo span{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:white;letter-spacing:.02em}
 .nav-links{display:flex;align-items:center;gap:32px;list-style:none}
 .nav-links a{color:rgba(255,255,255,.85);text-decoration:none;font-size:14px;font-weight:500;letter-spacing:.05em;text-transform:uppercase;transition:color .2s}
@@ -303,7 +304,7 @@ footer a:hover{color:var(--gold)}
 
 <!-- NAV -->
 <nav id="navbar">
-  <a href="#" class="nav-logo"><span>Sinalove</span></a>
+  <a href="#" class="nav-logo"><img src="photos/logo.png" alt="Sinalove Mexican"><span>Sinalove</span></a>
   <ul class="nav-links">
     <li><a href="#about">Our Story</a></li>
     <li><a href="#menu">Menu</a></li>
@@ -328,6 +329,7 @@ footer a:hover{color:var(--gold)}
   <div class="hero-bg"></div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
+    <img src="photos/logo.png" alt="Sinalove Mexican" style="width:110px;height:110px;border-radius:50%;object-fit:cover;margin-bottom:20px">
     <div class="hero-badge">⭐ 4.9 Rating · Guelph's Favourite Mexican</div>
     <h1>Guelph's Destination for <em>Authentic Mexican</em></h1>
     <p>Birria tacos, fresh aguachiles, Sinaloan sushi, and Pacific coast ceviches — made with love from Mazatlán to Guelph.</p>
@@ -414,7 +416,7 @@ footer a:hover{color:var(--gold)}
     </div>
     <div class="showcase-grid">
       <a href="#menu" class="showcase-item">
-        <img src="photos/birria-tacos.jpg" alt="Birria tacos at Sinalove Guelph">
+        <img src="photos/pro-birria.jpg" alt="Birria tacos at Sinalove Guelph — slow-braised halal beef with consommé and Jarritos">
         <div class="showcase-overlay">
           <div class="showcase-cat">Tacos &amp; Quesadillas</div>
           <div class="showcase-name">Birria &amp; Beyond</div>
@@ -422,15 +424,15 @@ footer a:hover{color:var(--gold)}
         </div>
       </a>
       <a href="#menu" class="showcase-item">
-        <img src="photos/ceviche-flag.webp" alt="Fresh ceviche at Sinalove — Sinaloan style">
+        <img src="photos/pro-tacos.jpg" alt="Gobernador tacos at Sinalove — shrimp and melted cheese with Mexican Coke">
         <div class="showcase-overlay">
-          <div class="showcase-cat">Ceviches &amp; Aguachiles</div>
-          <div class="showcase-name">Pacific Coast Seafood</div>
-          <div class="showcase-desc">Raw aguachiles, fresh ceviches, and seafood cocktails made the Mazatlán way.</div>
+          <div class="showcase-cat">Seafood Tacos</div>
+          <div class="showcase-name">Gobernador &amp; More</div>
+          <div class="showcase-desc">Shrimp, fish, octopus — Sinaloa's coastal tacos paired with Mexican Coke.</div>
         </div>
       </a>
       <a href="#menu" class="showcase-item">
-        <img src="photos/sushi-board.webp" alt="Sinaloan sushi at Sinalove Guelph">
+        <img src="photos/pro-sushi.jpg" alt="Sinaloan culichi sushi at Sinalove Guelph — sauce being drizzled tableside">
         <div class="showcase-overlay">
           <div class="showcase-cat">Sinaloan Sushi</div>
           <div class="showcase-name">Mexico Meets Japan</div>

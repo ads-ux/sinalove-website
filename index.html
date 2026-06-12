@@ -6,7 +6,7 @@
 <title>Sinalove – Guelph's Destination for Authentic Mexican Food</title>
 <meta name="description" content="Authentic Sinaloan Mexican in Guelph — birria tacos, fresh aguachiles, Sinaloan sushi, and Pacific coast ceviches. 447 Elizabeth Street. Dine in, pickup & delivery.">
 <meta property="og:title" content="Sinalove – Authentic Mexican Food in Guelph, Ontario">
-<meta property="og:description" content="Guelph's destination for authentic Sinaloan Mexican cuisine. Birria, aguachiles, sushi, ceviches, and weekend brunch.">
+<meta property="og:description" content="Guelph's destination for authentic Sinaloan Mexican cuisine. Birria, aguachiles, sushi, ceviches — Taco Tuesday & Sushi Thursday specials every week.">
 <meta property="og:image" content="photos/hero-flambe-sushi.webp">
 <meta property="og:url" content="https://sinalove.ca">
 <link rel="canonical" href="https://ads-ux.github.io/sinalove-website/">
@@ -21,7 +21,7 @@
   "@type": "Restaurant",
   "name": "Sinalove",
   "alternateName": "Sinalove Tacos, Sushi and Seafood",
-  "description": "Authentic Sinaloan Mexican restaurant in Guelph, Ontario. Owned by Erendira Paz and Chef Joel Romero. Serving birria tacos, fresh aguachiles, Sinaloan sushi, Pacific coast ceviches, seafood cocktails, and weekend brunch with café de olla.",
+  "description": "Authentic Sinaloan Mexican restaurant in Guelph, Ontario. Owned by Erendira Paz and Chef Joel Romero. Serving birria tacos, fresh aguachiles, Sinaloan sushi, Pacific coast ceviches, and seafood cocktails. Weekly specials: Taco Tuesday and Sushi Thursday.",
   "url": "https://ads-ux.github.io/sinalove-website/",
   "telephone": "+15198291051",
   "address": {
@@ -52,8 +52,8 @@
     {"@type": "OpeningHoursSpecification", "dayOfWeek": "Wednesday", "opens": "12:00", "closes": "19:45"},
     {"@type": "OpeningHoursSpecification", "dayOfWeek": "Thursday", "opens": "12:00", "closes": "20:45"},
     {"@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "12:00", "closes": "20:45"},
-    {"@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "08:00", "closes": "20:45"},
-    {"@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "08:00", "closes": "19:45"}
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "12:00", "closes": "20:45"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "12:00", "closes": "19:45"}
   ],
   "aggregateRating": {
     "@type": "AggregateRating",
@@ -204,7 +204,7 @@ nav.scrolled{background:var(--dark);box-shadow:0 2px 20px rgba(0,0,0,.4)}
 
 /* BRUNCH */
 .brunch-section{position:relative;overflow:hidden;min-height:480px;display:flex;align-items:center}
-.brunch-bg{position:absolute;inset:0;background-image:url('photos/brunch-plate.webp');background-size:cover;background-position:center}
+.brunch-bg{position:absolute;inset:0;background-image:url('photos/pro-tacos.jpg');background-size:cover;background-position:center}
 .brunch-overlay{position:absolute;inset:0;background:linear-gradient(to right,rgba(8,16,10,.92) 0%,rgba(8,16,10,.7) 55%,rgba(8,16,10,.2) 100%)}
 .brunch-content{position:relative;z-index:2;padding:80px 48px;max-width:540px}
 .brunch-content .section-label{color:rgba(230,180,80,.85)}
@@ -307,7 +307,7 @@ footer a:hover{color:var(--gold)}
   <ul class="nav-links">
     <li><a href="#about">Our Story</a></li>
     <li><a href="menu.html">Menu</a></li>
-    <li><a href="#brunch">Brunch</a></li>
+    <li><a href="#specials">Specials</a></li>
     <li><a href="#hours">Hours</a></li>
     <li><a href="https://sinalovemexican.bycalibre.ca/pickup" target="_blank" class="nav-cta">Order Online</a></li>
   </ul>
@@ -318,7 +318,7 @@ footer a:hover{color:var(--gold)}
 <div class="mobile-menu" id="mobileMenu">
   <a href="#about" onclick="closeMobile()">Our Story</a>
   <a href="menu.html" onclick="closeMobile()">Menu</a>
-  <a href="#brunch" onclick="closeMobile()">Brunch</a>
+  <a href="#specials" onclick="closeMobile()">Specials</a>
   <a href="#hours" onclick="closeMobile()">Hours</a>
   <a href="https://sinalovemexican.bycalibre.ca/pickup" target="_blank" class="m-order" onclick="closeMobile()">Order Online</a>
 </div>
@@ -479,20 +479,20 @@ footer a:hover{color:var(--gold)}
   </div>
 </section>
 
-<!-- BRUNCH -->
-<section class="brunch-section" id="brunch">
+<!-- WEEKLY SPECIALS -->
+<section class="brunch-section" id="specials">
   <div class="brunch-bg"></div>
   <div class="brunch-overlay"></div>
   <div class="brunch-content">
-    <span class="section-label">Every Weekend</span>
-    <h2 class="section-title">Saturday &amp; Sunday Brunch</h2>
-    <p>Authentic Mexican breakfast, made the way it's done back home — from Sinaloa with love.</p>
+    <span class="section-label">Every Week</span>
+    <h2 class="section-title">Taco Tuesday &amp; Sushi Thursday</h2>
+    <p>Two nights worth planning your week around — from Sinaloa with love.</p>
     <div class="brunch-details">
-      <div class="brunch-detail"><span class="icon">☕</span><span>Café de Olla — traditional clay pot coffee</span></div>
-      <div class="brunch-detail"><span class="icon">🕗</span><span>8:00 AM – 1:00 PM, Saturday &amp; Sunday</span></div>
-      <div class="brunch-detail"><span class="icon">🇲🇽</span><span>Authentic Sinaloan breakfast recipes</span></div>
+      <div class="brunch-detail"><span class="icon">🌮</span><span>Taco Tuesday — every Tuesday, specials on our signature tacos</span></div>
+      <div class="brunch-detail"><span class="icon">🍣</span><span>Sushi Thursday — every Thursday, deals on Sinaloan sushi rolls</span></div>
+      <div class="brunch-detail"><span class="icon">📲</span><span>Follow <a href="https://www.instagram.com/sina.loveguelph/" target="_blank" style="color:inherit">@sina.loveguelph</a> for this week's features</span></div>
     </div>
-    <a href="https://sinalovemexican.bycalibre.ca" target="_blank" class="btn btn-white">Order Brunch Online</a>
+    <a href="https://sinalovemexican.bycalibre.ca" target="_blank" class="btn btn-white">Order Online</a>
   </div>
 </section>
 
@@ -547,10 +547,10 @@ footer a:hover{color:var(--gold)}
           <tr><td>Wednesday</td><td>12:00 PM – 7:45 PM</td></tr>
           <tr><td>Thursday</td><td>12:00 PM – 8:45 PM</td></tr>
           <tr><td>Friday</td><td>12:00 PM – 8:45 PM</td></tr>
-          <tr><td>Saturday</td><td>8:00 AM – 8:45 PM*</td></tr>
-          <tr><td>Sunday</td><td>8:00 AM – 7:45 PM*</td></tr>
+          <tr><td>Saturday</td><td>12:00 PM – 8:45 PM</td></tr>
+          <tr><td>Sunday</td><td>12:00 PM – 7:45 PM</td></tr>
         </table>
-        <p style="font-size:12px;color:rgba(255,255,255,.25);margin-top:12px">* Brunch served 8am–1pm Saturday &amp; Sunday</p>
+        <p style="font-size:12px;color:rgba(255,255,255,.25);margin-top:12px">🌮 Taco Tuesday &nbsp;·&nbsp; 🍣 Sushi Thursday — weekly specials</p>
       </div>
       <div class="contact-block">
         <div class="contact-item">
@@ -607,10 +607,10 @@ footer a:hover{color:var(--gold)}
 <span class="section-label">Common Questions</span>
 <h2 class="section-title">FAQ</h2>
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:32px;margin-top:40px">
-<div><h3 style="font-family:'Playfair Display',serif;font-size:18px;margin-bottom:10px">What type of food does Sinalove serve?</h3><p style="font-size:15px;color:var(--text-light);line-height:1.7">Sinalove serves authentic Sinaloan Mexican cuisine from Mexico's Pacific coast — birria tacos, fresh aguachiles, ceviches, Sinaloan-style sushi rolls, seafood cocktails, and a weekend brunch featuring traditional café de olla.</p></div>
+<div><h3 style="font-family:'Playfair Display',serif;font-size:18px;margin-bottom:10px">What type of food does Sinalove serve?</h3><p style="font-size:15px;color:var(--text-light);line-height:1.7">Sinalove serves authentic Sinaloan Mexican cuisine from Mexico's Pacific coast — birria tacos, fresh aguachiles, ceviches, Sinaloan-style sushi rolls, and seafood cocktails, with weekly specials every Taco Tuesday and Sushi Thursday.</p></div>
 <div><h3 style="font-family:'Playfair Display',serif;font-size:18px;margin-bottom:10px">Is Sinalove halal?</h3><p style="font-size:15px;color:var(--text-light);line-height:1.7">Yes. Sinalove uses halal-certified beef and chicken. Halal items include the birria tacos, Taco de Arrachera, and related quesadillas.</p></div>
-<div><h3 style="font-family:'Playfair Display',serif;font-size:18px;margin-bottom:10px">Does Sinalove serve brunch?</h3><p style="font-size:15px;color:var(--text-light);line-height:1.7">Yes — every Saturday and Sunday, 8:00 AM to 1:00 PM. Brunch features authentic Sinaloan Mexican breakfast and traditional café de olla (clay pot coffee).</p></div>
-<div><h3 style="font-family:'Playfair Display',serif;font-size:18px;margin-bottom:10px">Where is Sinalove in Guelph?</h3><p style="font-size:15px;color:var(--text-light);line-height:1.7">Sinalove is at 447 Elizabeth Street, Guelph, Ontario N1E 6C2. Closed Mondays. Open Tuesday–Sunday, with weekend brunch on Saturday and Sunday mornings.</p></div>
+<div><h3 style="font-family:'Playfair Display',serif;font-size:18px;margin-bottom:10px">Does Sinalove have weekly specials?</h3><p style="font-size:15px;color:var(--text-light);line-height:1.7">Yes — Taco Tuesday brings specials on our signature tacos every Tuesday, and Sushi Thursday features deals on Sinaloan sushi rolls every Thursday. Follow @sina.loveguelph on Instagram for each week's features.</p></div>
+<div><h3 style="font-family:'Playfair Display',serif;font-size:18px;margin-bottom:10px">Where is Sinalove in Guelph?</h3><p style="font-size:15px;color:var(--text-light);line-height:1.7">Sinalove is at 447 Elizabeth Street, Guelph, Ontario N1E 6C2. Closed Mondays. Open Tuesday–Sunday.</p></div>
 <div><h3 style="font-family:'Playfair Display',serif;font-size:18px;margin-bottom:10px">Does Sinalove have vegan options?</h3><p style="font-size:15px;color:var(--text-light);line-height:1.7">Yes. The vegan menu includes the Veggi Roll, Zucchini Taco, Mushroom Taco, and Guacamole & Chips. Many ceviches and sushi can also be adapted.</p></div>
 <div><h3 style="font-family:'Playfair Display',serif;font-size:18px;margin-bottom:10px">Can I order Sinalove for pickup or delivery?</h3><p style="font-size:15px;color:var(--text-light);line-height:1.7">Yes. Order directly for pickup or delivery at <a href="https://sinalovemexican.bycalibre.ca" style="color:var(--gold)">sinalovemexican.bycalibre.ca</a>, or through Uber Eats.</p></div>
 </div>
